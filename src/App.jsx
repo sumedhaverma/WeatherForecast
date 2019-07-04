@@ -71,7 +71,7 @@ class App extends React.Component {
 
     // async call to fetch weather data
     async getWeather(option) {
-        const api_call = await fetch(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${option.name},${option.country}&appid=${Const.APP_ID}&cnt=7`);
+        const api_call = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${option.name},${option.country}&appid=${Const.APP_ID}&cnt=7`);
         const response = await api_call.json();
         
         let { city, list = [] } = response;
